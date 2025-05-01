@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         
         testUI()
     }
-
+    
     lazy var tableView = {
         let table = UITableView(frame: .zero)
         table.backgroundColor = .white
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
             ])
         }
     }
-
+    
 }
 
 extension UIColor {
@@ -74,7 +74,7 @@ extension UIColor {
         var trans = transparency
         if trans < 0 { trans = 0 }
         if trans > 1 { trans = 1 }
-
+        
         self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: trans)
     }
 }
